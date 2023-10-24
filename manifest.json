@@ -1,0 +1,36 @@
+{
+	"name": "My Application",
+	"short_name": "MyApp",
+	"description": "An example of a Progressive Web App",
+	"start_url": "index.html",
+	"display": "standalone",
+	"scope": "/",
+	"background_color": "#3367D6",
+	"theme_color": "#3367D6",
+	"icons": [
+		{
+			"src": "favicon-192x192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "favicon-512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "screenshot-wide.png",
+			"sizes": "800x600",
+			"type": "image/png",
+			"form_factor": "wide"
+		},
+		{
+			"src": "screenshot-narrow.png",
+			"sizes": "800x600",
+			"type": "image/jpg",
+			"form_factor": "narrow"
+		}
+	]
+}
