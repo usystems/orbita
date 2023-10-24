@@ -3,6 +3,7 @@
 	"short_name": "MyApp",
 	"description": "An example of a Progressive Web App",
 	"start_url": "index.html",
+	"display_override": ["fullscreen", "minimal-ui"],
 	"display": "standalone",
 	"scope": "/",
 	"background_color": "#3367D6",
