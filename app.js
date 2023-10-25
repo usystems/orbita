@@ -252,4 +252,4 @@ function onDOMContentLoaded() {
 
 document.addEventListener('DOMContentLoaded', onDOMContentLoaded);
 window.addEventListener('beforeinstallprompt', onBeforeInstallPrompt);
-// window.addEventListener('appinstalled', onAppInstalled);
+window.addEventListener('appinstalled', onAppInstalled);
