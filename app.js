@@ -231,7 +231,7 @@ function onBeforeInstallPrompt(event) {
 	for (let i = 0; i < elements.length; i++) {
 		const newElement = elements[i].cloneNode(true);
 		newElement.addEventListener('click', () => event.prompt());
-		elements[i].replaceWith(newElement.cloneNode(true));
+		elements[i].replaceWith(newElement);
 	}
 }
 
