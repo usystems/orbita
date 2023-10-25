@@ -119,7 +119,7 @@ function nextMonth(year, month) {
 function getDayClasses(cyclesVisible, day, month, year) {
 	let dayClasses = 'calendar-table__col';
 	const today = new Date();
-	if (cyclesVisible.some(cycle => sanetizeDate(today.getDay(), today.getMonth(), today.getFullYear()) === sanetizeDate(day - 3, month, year))) {
+	if (cyclesVisible.some(cycle => sanetizeDate(today.getDate(), today.getMonth(), today.getFullYear()) === sanetizeDate(day, month, year))) {
 		dayClasses += ' calendar-table__event calendar-table__event--today';
 	}
 
