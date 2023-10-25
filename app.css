@@ -48,12 +48,13 @@ body {
 	background-image: url('logo-border.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
+    aspect-ratio: 2.14;
+    background-color: #FF6B6BB0
 }
 
 .onion-circle {
 	margin: auto;
 	width: 50%;
-	aspect-ratio: 1;
 	text-align: center;
 }
 
