@@ -28,7 +28,7 @@ body {
 }
 
 .main-container-wrapper {
-	background-color: #F8FAFA;
+	background-color: #fff;
 	min-width: 320px;
 	min-height: 568px;
 	max-width: 372px;
@@ -45,7 +45,6 @@ body {
 }
 
 .onion-container {
-	background-color: #fff;
 	background-image: url('logo-border.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -72,7 +71,6 @@ body {
 }
 
 .calendar-container {
-	background-color: #fff;
 	padding: 0;
 }
 
@@ -291,37 +289,38 @@ body {
 	padding: 20px;
 }
 
-button-period {
-background-image: linear-gradient(-180deg, #FF6B6BB0 0%, #ff6b6beb 100%);
-    border-radius: 0.5rem;
-    box-sizing: border-box;
-    color: #424588;
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    width: 100%;
-    border: 0;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    font-weight: 700;
-	}
-button-ovulation {
-background-image: linear-gradient(-180deg, #ffaa22 0%, #ffcc37db 100%);
-    border-radius: 0.5rem;
-    box-sizing: border-box;
-    color: #424588;
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    width: 100%;
-    border: 0;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    font-weight: 700;
+.button-period {
+	background-image: linear-gradient(-180deg, #FF6B6BB0 0%, #ff6b6beb 100%);
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	color: #424588;
+	display: flex;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	width: 100%;
+	border: 0;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	font-weight: 700;
+}
+
+.button-ovulation {
+	background-image: linear-gradient(-180deg, #ffaa22 0%, #ffcc37db 100%);
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	color: #424588;
+	display: flex;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	width: 100%;
+	border: 0;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	font-weight: 700;
 }

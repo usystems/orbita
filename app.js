@@ -86,20 +86,20 @@ function selectDay(day, month, year) {
 	buttons.innerHTML = '';
 	if (showPeriodBegin) {
 		const activeIndex = cycles.findIndex((cycle, index) => (index === 0 ? cycle.begin : cycles[index - 1].ovolution) <= date && cycle.end >= date);
-		buttons.innerHTML = `<div class="button-container__button button-period">
-			<button onclick="setPeriodBegin(${day}, ${month}, ${year}, ${activeIndex})" >Periode beginnt</button>
+		buttons.innerHTML = `<div class="button-container__button">
+			<button class="button-period" onclick="setPeriodBegin(${day}, ${month}, ${year}, ${activeIndex})" >Periode beginnt</button>
 		</div>`;
 	}
 	if (showPeriodEnd) {
 		const activeIndex = cycles.findIndex((cycle, index) => cycle.begin <= date && cycle.ovolution >= date);
-		buttons.innerHTML += `<div class="button-container__button button-period">
-			<button onclick="setPeriodEnd(${day}, ${month}, ${year}, ${activeIndex} )">Periode endet</button>
+		buttons.innerHTML += `<div class="button-container__button">
+			<button class="button-period" onclick="setPeriodEnd(${day}, ${month}, ${year}, ${activeIndex} )">Periode endet</button>
 		</div>`;
 	}
 	if (showOvolution) {
 		const activeIndex = cycles.findIndex((cycle, index) => cycle.end <= date && (index + 1 === cycles.length ? cycle.ovolution : cycles[index + 1].begin) >= date);
-		buttons.innerHTML += `<div class="button-container__button button-ovulation">
-			<button onclick="setOvulation(${day}, ${month}, ${year}, ${activeIndex} )"  >Eisprung</button>
+		buttons.innerHTML += `<div class="button-container__button">
+			<button class="button-ovulation" onclick="setOvulation(${day}, ${month}, ${year}, ${activeIndex} )"  >Eisprung</button>
 		</div>`;
 	}
 
@@ -239,7 +239,7 @@ function onBeforeInstallPrompt(event) {
 }
 
 function onDOMContentLoaded() {
-	const className = !window.matchMedia("(display-mode: standalone)").matches ? 'app-main' : 'page-main';
+	const className = window.matchMedia("(display-mode: standalone)").matches ? 'app-main' : 'page-main';
 	if (className === 'page-main') {
 		['webpage/nicepage.css', 'webpage/Startseite.css'].forEach(url => {
 			const link = document.createElement('link');
