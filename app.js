@@ -208,19 +208,34 @@ function renderMonth(year, month) {
 	body.innerHTML = bodyHTML;
 }
 
+function removeDisplayNone(className) {
+	for (let i = 0; i < document.styleSheets.length; i++) {
+		if (document.styleSheets[i].href.endsWith("app.css")) {
+			for (let j = 0; j < document.styleSheets[i].cssRules.length; j++) {
+				if (document.styleSheets[i].cssRules[j].selectorText === `.${className}`) {
+					document.styleSheets[i].cssRules[j].style.removeProperty('display');
+					break;
+				}
+			}
+			break;
+		}
+	}
+}
+
+
 function onBeforeInstallPrompt(event) {
 	event.preventDefault();
+	removeDisplayNone('app-install-button');
 
-	const installButton = document.createElement('button');
-	installButton.textContent = 'Add to Homescreen';
-	installButton.addEventListener('click', () => event.prompt());
-
-	document.body.appendChild(installButton);
+	const elements = document.getElementsByClassName("app-install-button");
+	for (let i = 0; i < elements.length; i++) {
+		elements[i].addEventListener('click', () => event.prompt());
+	}
 }
 
 function onDOMContentLoaded() {
-	const elId = !window.matchMedia("(display-mode: standalone)").matches ? 'app' : 'page';
-	document.getElementById(elId).style.display = 'block';
+	const className = window.matchMedia("(display-mode: standalone)").matches ? 'app-main' : 'page-main';
+	removeDisplayNone(className);
 
 	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register('service-worker.js')
