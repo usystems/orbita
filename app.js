@@ -222,6 +222,9 @@ function removeDisplayNone(className) {
 	}
 }
 
+function onAppInstalled() {
+	location.reload(true);
+}
 
 function onBeforeInstallPrompt(event) {
 	event.preventDefault();
@@ -247,5 +250,6 @@ function onDOMContentLoaded() {
 	renderMonth(currentDate.getFullYear(), currentDate.getMonth());
 }
 
+window.addEventListener('appinstalled', onAppInstalled);
 document.addEventListener('DOMContentLoaded', onDOMContentLoaded);
 window.addEventListener('beforeinstallprompt', onBeforeInstallPrompt);
