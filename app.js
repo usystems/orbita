@@ -229,7 +229,9 @@ function onBeforeInstallPrompt(event) {
 
 	const elements = document.getElementsByClassName("app-install-button");
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].addEventListener('click', () => event.prompt());
+		const newElement = elements[i].cloneNode(true);
+		newElement.addEventListener('click', () => event.prompt());
+		elements[i].replaceWith(newElement.cloneNode(true));
 	}
 }
 
