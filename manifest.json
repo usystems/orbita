@@ -1,7 +1,7 @@
 {
-	"name": "My Application",
-	"short_name": "MyApp",
-	"description": "An example of a Progressive Web App",
+	"name": "Orbita Zyklus-App",
+	"short_name": "Orbita",
+	"description": "Einfach und sicher deinen Zyklus mit der Orbita Zyklus-App verfolgen.",
 	"start_url": "index.html",
 	"display_override": ["fullscreen", "minimal-ui"],
 	"display": "standalone",

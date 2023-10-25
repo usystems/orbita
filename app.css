@@ -41,7 +41,7 @@ body {
 	margin: auto;
 	width: 50%;
 	aspect-ratio: 1;
-	background-image: url('logo-border.png');
+	background-image: url('logo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
@@ -93,7 +93,7 @@ body {
 }
 
 .calendar-container__title {
-	color: #222741;
+	color: #424588;
 	font-size: 20px;
 	font-weight: 600;
 }
@@ -179,7 +179,7 @@ body {
 	}
 }
 
-.calendar-table__today .calendar-table__item {
+.calendar-table__selected .calendar-table__item {
 	border-color: #FEFEFE;
 	background-color: #F2F6F8;
 	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -187,20 +187,26 @@ body {
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-.calendar-table__event--blue .calendar-table__item {
-	background-color: #0560AF;
+.calendar-table__event--red .calendar-table__item {
+	background-color: #FF6B6BB0;
 }
 
-.calendar-table__event--red .calendar-table__item {
-	background-color: #FF6B6B;
+.calendar-table__event--lightyellow .calendar-table__item {
+	background-color: #ffcc377f;
+}
+
+.calendar-table__event--yellow .calendar-table__item {
+	background-color: #ffaa22;
+}
+
+.calendar-table__event--today .calendar-table__item {
+	border-color: #0560af !important;
+	border-width: 2px;
 }
 
 .calendar-table__event .calendar-table__item {
 	border-color: #FEFEFE;
-	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-	color: #fff;
+	color: #424588;
 }
 
 .calendar-table__event--long {
@@ -241,7 +247,7 @@ body {
 }
 
 .calendar-table__inactive.calendar-table__event .calendar-table__item {
-	color: #fff;
+	color: #424588;
 	opacity: 0.25;
 }
 
