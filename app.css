@@ -47,9 +47,10 @@ body {
 .onion-container {
 	background-image: url('logo-border.svg');
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
     aspect-ratio: 2.14;
-    background-color: #FF6B6BB0
+    background-color: #ff6b6b6e;
+    margin-bottom: 12px;
 }
 
 .onion-circle {
@@ -69,6 +70,7 @@ body {
 .onion-circle__inner-label {
 	font-size: 16px;
 	font-weight: 600;
+	margin-top: -4px;
 }
 
 .calendar-container {
