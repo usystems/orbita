@@ -93,13 +93,13 @@ function selectDay(day, month, year) {
 	if (showPeriodEnd) {
 		const activeIndex = cycles.findIndex((cycle, index) => cycle.begin <= date && cycle.ovolution >= date);
 		buttons.innerHTML += `<div class="button-container__button">
-			<button onclick="setPeriodEnd(${day}, ${month}, ${year}, ${activeIndex} class="button-period")">Periode endet</button>
+			<button onclick="setPeriodEnd(${day}, ${month}, ${year}, ${activeIndex} )" class="button-period">Periode endet</button>
 		</div>`;
 	}
 	if (showOvolution) {
 		const activeIndex = cycles.findIndex((cycle, index) => cycle.end <= date && (index + 1 === cycles.length ? cycle.ovolution : cycles[index + 1].begin) >= date);
 		buttons.innerHTML += `<div class="button-container__button">
-			<button onclick="setOvulation(${day}, ${month}, ${year}, ${activeIndex} class="button-ovulation")">Eisprung</button>
+			<button onclick="setOvulation(${day}, ${month}, ${year}, ${activeIndex} )"  class="button-ovulation">Eisprung</button>
 		</div>`;
 	}
 
