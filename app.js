@@ -239,7 +239,18 @@ function onBeforeInstallPrompt(event) {
 }
 
 function onDOMContentLoaded() {
-	const className = window.matchMedia("(display-mode: standalone)").matches ? 'app-main' : 'page-main';
+	const className = !window.matchMedia("(display-mode: standalone)").matches ? 'app-main' : 'page-main';
+	if (className === 'page-main') {
+		['webpage/nicepage.css', 'webpage/Startseite.css'].forEach(url => {
+			const link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.media = 'screen';
+			link.href = url;
+			document.head.appendChild(link);
+		})
+	}
+
 	removeDisplayNone(className);
 
 	if ('serviceWorker' in navigator) {

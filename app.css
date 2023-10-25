@@ -46,16 +46,15 @@ body {
 
 .onion-container {
 	background-color: #fff;
-	padding: 1px 0 24px 0;
+	background-image: url('logo-border.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .onion-circle {
 	margin: auto;
 	width: 50%;
 	aspect-ratio: 1;
-	background-image: url('logo.png');
-	background-repeat: no-repeat;
-	background-size: cover;
 	text-align: center;
 }
 
